@@ -13,7 +13,7 @@
             {% include '_nav_bar.html' %}
             <!-- Page content here -->
             <div class="">
-                <div class="h-80 hero" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+                <div class="h-80 hero" style="background-image: url(/static/image/background.jpg);">
                     <div class="hero-overlay bg-opacity-60"></div>
                     <div class="text-center hero-content text-neutral-content">
                         <div class="max-w-md">
@@ -43,36 +43,32 @@
 
                 <div class="grid grid-cols-2 gap-4 ">
                     <div class="w-full p-2 border mockup-window bg-base-300">
-                        <div class="w-full rounded">
-                            <img src="/static/image/demo/relay100ch.png" />
-                        </div>
+                        <img class="w-full rounded-lg" src="/static/image/demo/relay100ch.png" />
                         <p class="">PCB Design</p>
                     </div>
                     <div class="w-full p-2 border mockup-window bg-base-300">
-                        <div class="w-full rounded">
-                            <img src="/static/image/demo/screen_dev001.png" />
-                        </div>
+                        <img class="w-full rounded-lg" src="/static/image/demo/screen_dev001.png" />
                         <p class="">Developer Program</p>
                     </div>
-                    <div class="border mockup-browser bg-base-300">
+                    <div class="p-2 border mockup-browser bg-base-300">
                         <div class="mockup-browser-toolbar">
                             <div class="input">https://pksofttech.org</div>
                         </div>
-                        <div class="w-full rounded">
-                            <img src="/static/image/demo/web_app_demo.png" />
-                        </div>
+                        <img class="w-full rounded-lg" src="/static/image/demo/web_app_demo.png" />
                         <p class="">Web Application</p>
                     </div>
                     <div class="w-full p-2 border mockup-window bg-base-300">
-                        <div class="flex justify-center px-4 py-16 bg-base-200">
-                            <img src="/static/image/demo/laduino_app.png" />
-                        </div>
+                        <img class="w-full rounded-lg" class="rounded-lg" src="/static/image/demo/laduino_app.png" />
                         <p class="">Control Program</p>
                     </div>
 
-                    <div class="w-full h-48 p-2 border mockup-window bg-base-300">
-                        <div class="flex justify-center px-4 py-16 bg-base-200">
-                            <span class="text-indigo-600 loading loading-spinner loading-lg"></span>
+                    <div class="w-full p-2 border mockup-window bg-base-300">
+                        <div class="flex justify-center bg-base-200">
+                            <video class="w-full rounded-lg" controls="controls" poster="/static/image/demo/relay100ch.png" preload="true">
+                                <source src="/static/video/pcb_test.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+
                         </div>
 
                     </div>
