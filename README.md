@@ -1,4 +1,4 @@
-# PK_PARK_MANAGMENT
+# PK_HOME
 
 git reset --hard origin/master
 
