@@ -57,19 +57,17 @@ async def page_404(url: str = ""):
 async def main_path(
     app_mode: str | None = Cookie(default="SYSTEM"),
     db: AsyncSession = Depends(get_async_session),
-    user=Depends(access_cookie_token),
+    # user=Depends(access_cookie_token),
 ):
     _now = time_now()
     # for check_login user
-    print("request from user", user)
+    # print("request from user", user)
     # Check login user
-    if user:
-        return RedirectResponse(url="/home")
-    else:
-        return templates.TemplateResponse(
-            "login.html",
-            {"request": {}, "now": _now, "app_title": config.APP_TITLE},
-        )
+
+    return templates.TemplateResponse(
+        "login.html",
+        {"request": {}, "now": _now, "app_title": config.APP_TITLE},
+    )
 
 
 @router.get("/about")
@@ -96,20 +94,20 @@ async def ping(request: Request):
 @router.get("/home")
 async def router_home(
     db: AsyncSession = Depends(get_async_session),
-    user=Depends(access_cookie_token),
+    # user=Depends(access_cookie_token),
 ):
-    if not user:
-        return RedirectResponse(url="/")
+    # if not user:
+    #     return RedirectResponse(url="/")
     _now = time_now()
-    print(user)
-    datas = {}
+    # print(user)
+    # datas = {}
 
     return templates.TemplateResponse(
         "home.html",
         {
             "request": {},
-            "user": user,
-            "datas": datas,
+            # "user": user,
+            # "datas": datas,
             "now": _now,
         },
     )
