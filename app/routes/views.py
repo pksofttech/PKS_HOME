@@ -65,7 +65,7 @@ async def main_path(
     # Check login user
 
     return templates.TemplateResponse(
-        "login.html",
+        "home.html",
         {"request": {}, "now": _now, "app_title": config.APP_TITLE},
     )
 
