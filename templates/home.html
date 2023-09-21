@@ -115,26 +115,6 @@
             showConfirmButton: false,
         });
     }
-    async function req_service_transaction(service_id) {
-
-        const formData = new FormData();
-        formData.append("machine", "test");
-        formData.append("service_id", service_id);
-        const _reply = await fetchApi("/api/transaction/", "post", formData, "json");
-
-        if (!!_reply) {
-            if (_reply.success == true) {
-                const transaction = _reply.data
-                show_info(transaction[1].group + transaction[0].number);
-            } else {
-                toastMixin.fire({
-                    title: JSON.stringify(_reply),
-                    icon: "error",
-                });
-            }
-
-        }
-    }
 </script>
 
 </html>
