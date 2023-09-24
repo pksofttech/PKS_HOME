@@ -1,10 +1,8 @@
 <div class="relative top-0 w-full mb-2 navbar bg-base-200 rounded-box">
     <div class="navbar-start">
         <div class="flex items-center justify-start">
-            <label for="side-drawer" class="btn btn-square btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
+            <label for="side-drawer" class="btn btn-circle btn-ghost md:hidden">
+                <i class="fas fa-bars text-accent"></i>
             </label>
             <a href="/" class="flex mx-2 md:mr-24">
                 <img src="/static/image/system.png" class="h-8 mr-3" alt="pk Logo" />
@@ -13,7 +11,7 @@
         </div>
     </div>
 
-    <div class="navbar-center">
+    <div class=" navbar-center">
         <!-- <div class="text-sm breadcrumbs">
             <ul>
                 <li>
@@ -68,14 +66,14 @@
         </label> -->
 
         <button class=" btn btn-ghost btn-circle" onclick="toggleFullScreen();">
-            <i class="text-lg transition duration-500 transform fas fa-expand-arrows-alt hover:scale-150"></i>
+            <i class="text-lg transition duration-500 transform fas fa-expand-arrows-alt hover:scale-150 text-accent"></i>
         </button>
 
         <div class="dropdown dropdown-bottom dropdown-end">
 
             <button tabindex="0" class="btn btn-ghost btn-circle" onclick="message_dropdown_btn_clock();">
                 <div class=" indicator">
-                    <i class="text-lg fa-solid fa-bell "></i>
+                    <i class="text-lg fa-solid fa-bell text-info"></i>
                     <span id="message_notification_count" class="badge badge-xs badge-warning indicator-item "></span>
                 </div>
             </button>
@@ -108,7 +106,7 @@
             </template>
             <ul tabindex="0" id="message_dropdown_content" class="p-2 shadow-2xl z-[1]  dropdown-content menu bg-base-100 rounded-box">
                 <div class="px-4 py-3">
-                    <span class="block text-sm text-center text-gray-900 dark:text-white">Message</span>
+                    <span class="block text-sm text-center ">Message</span>
                 </div>
             </ul>
         </div>

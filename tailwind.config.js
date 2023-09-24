@@ -9,23 +9,23 @@ module.exports = {
         themes: [
             {
                 apptheme: {
-                    primary: "#1bc4c6",
+                    primary: "#8ad3d8",
 
-                    secondary: "#efb6aa",
+                    secondary: "#45cc4e",
 
-                    accent: "#910805",
+                    accent: "#ba4d32",
 
-                    neutral: "#1b252d",
+                    neutral: "#212a3b",
 
-                    "base-100": "#2d4253",
+                    "base-100": "#34343c",
 
-                    info: "#2244ec",
+                    info: "#82aee3",
 
-                    success: "#78dda7",
+                    success: "#218374",
 
-                    warning: "#f5b829",
+                    warning: "#9b6008",
 
-                    error: "#fa6b7e",
+                    error: "#f55178",
                 },
             },
         ], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]

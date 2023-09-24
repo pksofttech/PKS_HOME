@@ -5,7 +5,7 @@
     {% include '_meta.html' %}
 </head>
 
-<body class="flex flex-col">
+<body class="flex flex-col dark-mode">
 
     <div class="drawer lg:drawer-open ">
         <input id="side-drawer" type="checkbox" class="drawer-toggle" />
@@ -111,7 +111,7 @@
 
     {% include '_footer.html' %}
 </body>
-<!-- {% include '_script.html' %} -->
+{% include '_script.html' %}
 
 <script>
     function show_info(msg) {
@@ -125,6 +125,7 @@
             showConfirmButton: false,
         });
     }
+    toastr["info"]("ยินดีต้อนรับ PKSOFTTECH.ORG ยินดีต้อนรับ");
 </script>
 
 </html>

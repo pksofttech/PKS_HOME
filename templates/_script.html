@@ -15,7 +15,7 @@
 
 <script src="/static/common/common_script.js?t={{now}}"></script>
 
-<!-- <script src="/static/common/web_socket.js?t={{now}}"></script> -->
+<script src="/static/common/web_socket.js?t={{now}}"></script>
 
 <script src="/static/plugins/tailwind/flowbite.js"></script>
 
@@ -324,5 +324,25 @@
             }
         }
 
+    }
+</script>
+
+<script>
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "10000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
     }
 </script>

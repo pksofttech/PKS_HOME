@@ -18,11 +18,12 @@ function connect() {
 
     ws.onclose = function (e) {
         console.log("Socket is closed. Reconnect will be attempted in 5 second.", e.reason);
-        toastMixin.fire({
-            title: `Server Reload`,
-            text: "reload......",
-            icon: "warning",
-        });
+        //toastMixin.fire({
+        //    title: `Server Reload`,
+        //    text: "reload......",
+        //    icon: "warning",
+        //});
+        toastr["warning"]("Server Reload");
         setTimeout(() => {
             location.reload();
         }, 1000);

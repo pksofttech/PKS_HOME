@@ -70,6 +70,23 @@ async def main_path(
     )
 
 
+@router.get("/qpks")
+async def main_path(
+    app_mode: str | None = Cookie(default="SYSTEM"),
+    db: AsyncSession = Depends(get_async_session),
+    # user=Depends(access_cookie_token),
+):
+    _now = time_now()
+    # for check_login user
+    # print("request from user", user)
+    # Check login user
+
+    return templates.TemplateResponse(
+        "qpks.html",
+        {"request": {}, "now": _now, "app_title": config.APP_TITLE},
+    )
+
+
 @router.get("/about")
 async def about_path(db: AsyncSession = Depends(get_async_session), user=Depends(access_cookie_token)):
     _now = time_now()
