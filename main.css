@@ -43,6 +43,13 @@ body {
     animation-fill-mode: forwards;
 }
 
+h1 {
+    font-size: x-large;
+}
+h2 {
+    font-size: larger;
+}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -181,4 +188,32 @@ div.dataTables_wrapper {
 
 .input_login_form {
     @apply input px-2 hover:bg-primary;
+}
+
+.info_box {
+    @apply flex w-full overflow-hidden rounded-md shadow-lg border border-gray-500;
+}
+
+.info_icon {
+    @apply flex items-center w-24 justify-center px-4 m-2 rounded-md;
+}
+
+.info_icon_full {
+    @apply flex items-center w-24 justify-center px-4;
+}
+
+.info_icon_end {
+    @apply flex items-center justify-end flex-grow px-4;
+}
+
+.info_content {
+    @apply p-4 bg-transparent;
+}
+
+.text_success_h1 {
+    @apply text-success text-3xl font-bold;
+}
+
+.text_success_h2 {
+    @apply text-success text-2xl font-bold;
 }
