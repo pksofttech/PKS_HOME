@@ -4163,6 +4163,10 @@ html {
   width: 1.25rem;
 }
 
+.w-5\/6 {
+  width: 83.333333%;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -4177,6 +4181,18 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .min-w-0 {
@@ -4235,8 +4251,16 @@ html {
   resize: both;
 }
 
+.auto-cols-min {
+  grid-auto-columns: min-content;
+}
+
 .grid-flow-row {
   grid-auto-flow: row;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
 }
 
 .grid-cols-2 {
@@ -4245,6 +4269,10 @@ html {
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -5309,7 +5337,7 @@ div.dataTables_wrapper {
 .info_icon {
   margin: 0.5rem;
   display: flex;
-  width: 6rem;
+  width: 4rem;
   align-items: center;
   justify-content: center;
   border-radius: 0.375rem;
@@ -5615,12 +5643,20 @@ div.dataTables_wrapper {
     display: none;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:flex-row {
-    flex-direction: row;
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
   .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -5649,8 +5685,16 @@ div.dataTables_wrapper {
     margin-bottom: 1.5rem;
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
   .lg\:flex-row {

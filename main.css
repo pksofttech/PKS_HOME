@@ -195,7 +195,7 @@ div.dataTables_wrapper {
 }
 
 .info_icon {
-    @apply flex items-center w-24 justify-center px-4 m-2 rounded-md;
+    @apply flex items-center  justify-center px-4 m-2 rounded-md w-16;
 }
 
 .info_icon_full {

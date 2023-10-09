@@ -1,6 +1,6 @@
 # PK_HOME
 
-git reset --hard origin/master
+git reset --hard origin
 
 git pull --rebase --autostash
 
