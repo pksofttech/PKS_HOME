@@ -6,7 +6,7 @@
 
 </head>
 
-<body class="container mx-auto dark-mode mb-28">
+<body class="container mx-auto mb-28">
 
     <div class="drawer lg:drawer-open ">
         <input id="side-drawer" type="checkbox" class="drawer-toggle" />
@@ -14,6 +14,11 @@
             {% include '_nav_bar.html' %}
 
             <div class="flex flex-col">
+                <h1 class="text-lg">QPKS SYSTEM.</h1>
+                <p class="text-sm indent-8">ระบบเรียกบริการคือระบบที่ใช้ในการจัดการและควบคุมการเรียกให้บริการหรือการรอคอยของลูกค้าหรือผู้ใช้บริการในสถานที่ต่าง ๆ เช่น
+                    โรงพยาบาล ห้างสรรพสินค้า
+                    ร้านอาหาร เป็นต้น เป้าหมายหลักของระบบเรียกบริการคือการลดระยะเวลารอคอยและเพิ่มประสิทธิภาพในการให้บริการแก่ลูกค้าหรือผู้ใช้งานโดยทั่วไป
+                </p>
                 <div class="grid gap-2 text-sm md:grid-cols-2 lg:grid-cols-3">
 
                     <div class="info_box">
@@ -88,74 +93,94 @@
             <div class="p-8">
                 <div class="flex flex-col gap-8 lg:flex-row ">
                     <div class="flex flex-col w-full gap-4">
-                        <figure class="mx-auto ">
-                            <img id="product_image_preview" src="/static/image/demo/qpks_screen.png" class="rounded-md ring-1">
+                        <figure class="mx-auto">
+                            <img id="product_image_preview" src="/static/image/demo/qpks_screen.png" class="rounded-md ring-2 max-h-96">
                         </figure>
                         <div class="grid grid-cols-4 gap-2 mx-auto md:grid-cols-8 lg:grid-cols-10 ">
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/demo/qpks_screen.png" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/demo/qpks_screen.png" alt="Product Image">
                                 </div>
                             </div>
 
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/demo/m_qpks.png" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/demo/m_qpks.png" alt="Product Image">
                                 </div>
                             </div>
 
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
                                 </div>
                             </div>
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
                                 </div>
                             </div>
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
                                 </div>
                             </div>
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
                                 </div>
                             </div>
                             <div class="avatar">
-                                <div class="w-20 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
+                                <div class="w-16 rounded-lg hover:ring-4"><img onclick="select_product_img(this)" src="/static/image/background.jpg" alt="Product Image">
                                 </div>
                             </div>
 
                         </div>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <h1 class="text_success_h1">QPKS SYSTEM.</h1>
-                        <p class="indent-8">ระบบเรียกบริการคือระบบที่ใช้ในการจัดการและควบคุมการเรียกให้บริการหรือการรอคอยของลูกค้าหรือผู้ใช้บริการในสถานที่ต่าง ๆ เช่น
-                            โรงพยาบาล ห้างสรรพสินค้า
-                            ร้านอาหาร เป็นต้น เป้าหมายหลักของระบบเรียกบริการคือการลดระยะเวลารอคอยและเพิ่มประสิทธิภาพในการให้บริการแก่ลูกค้าหรือผู้ใช้งานโดยทั่วไป
-                        </p>
-                        <hr>
+                        <div class="max-w-2xl p-4 mt-4 overflow-auto rounded-lg w-96 h-96 ring-2">
+                            <div class="py-4 text-primary" id="product_tabContent">
+                                <div name="product_tabContent" class="block">Starter (จอเรียกคิว) เป็นระบบการเรียกรับบริการแบบกำหนดเอง การใช้งานออกแบบให้เรียบง่าย
+                                    สามารถเรียกรับบริการได้ง่ายโดยการกดเรียกผ่าน key board ไร้สาย รองรับหลายภาษา เช่น ไทย English Chinese...
+                                    <p class="p-4">
+                                        <span class="badge badge-neutral">แสดงข้อมูล video:</span>
+                                        ระบบจะแสดงข้อมูล Video สามารถปรับเปลื่ยนได้
+                                    </p>
+                                    <p class="p-4">
+                                        <span class="badge badge-neutral">แสดงข้อมูลตัวหนังสือประชาสัมพันธ์:</span>
+                                        ระบบจะแสดงข้อมูล โฆษณาประชาสัมพันธ์ สามารถปรับเปลื่ยนได้
+                                    </p>
+                                    <p class="p-4">
+                                        <span class="badge badge-neutral">* สามารถปรับรูปแบบการแสดงผลตามต้องการ:</span>
+                                        ระบบจะแสดงข้อมูล รูปแบบ สี ตาราง สามารถออกแบบได้ตามลูกค้าต้องการ (เป็นงานออกแบบเฉพาะราย)
+                                    </p>
 
-                        <h4 class="text-center text_success_h2">Modal <small>ข้อมูลการรองรับอุปกรณ์</small></h4>
-                        <div id="product_select_box_01" class="justify-between grid-flow-row shadow-lg join text-primary">
-                            <button onclick="product_select(1)" class="join-item btn btn-success">
+                                    <p class="p-4 text-sm text-warning">
+                                        * รายการเพื่มเติมขอสงวนสิทธ์
+                                    </p>
+
+                                </div>
+                                <div name="product_tabContent" class="hidden"> </div>
+                                <div name="product_tabContent" class="hidden"> </div>
+                            </div>
+                        </div>
+
+                        <h4 class="text-center ">Modal <small>ข้อมูลการรองรับอุปกรณ์</small></h4>
+                        <div id="product_select_box_01" class="flex flex-col shadow-lg text-primary">
+                            <button onclick="product_select(1)" class=" btn btn-success">
                                 <div class="flex flex-col">
                                     <div class="text-lg">Starter</div>
                                     จอเรียกคิว
                                 </div>
                             </button>
-                            <button onclick="product_select(2)" class="join-item btn btn-ghost">
+                            <button onclick="product_select(2)" class=" btn btn-ghost">
                                 <div class="flex flex-col">
                                     <div class="text-lg">General</div>
                                     <div>1P4C1M</div>
                                 </div>
 
                             </button>
-                            <button onclick="product_select(3)" class="join-item btn btn-ghost">
+                            <button onclick="product_select(3)" class=" btn btn-ghost">
                                 <div class="flex flex-col">
                                     <span class="text-lg">Business</span>
                                     xPxCxM
 
                                 </div>
                             </button>
-                            <button onclick="product_select(4)" class="join-item btn btn-ghost">
+                            <button onclick="product_select(4)" class=" btn btn-ghost">
                                 <div class="flex flex-col">
                                     <span class="text-lg">Development</span>
                                     ตามต้องการ
@@ -179,16 +204,16 @@
 
                         </div>
 
-                        <div class="flex flex-row justify-between">
-                            <a class="btn btn-primary btn-lg btn-outline">
+                        <div class="flex flex-col">
+                            <a class="btn btn-primary btn-outline">
                                 <i class="mr-2 fas fa-cart-plus fa-lg"></i>
                                 ติดต่อสอบถาม
                             </a>
-                            <a href="/qpks_video" target="_blank" class="btn btn-success btn-lg btn-outline">
+                            <a href="/qpks_video" target="_blank" class="btn btn-success btn-outline">
                                 <i class="fa-brands fa-youtube fa-lg"></i>
                                 Video review
                             </a>
-                            <a href="/qpks_demo" target="_blank" class="btn btn-warning btn-lg btn-outline">
+                            <a href="/qpks_demo" target="_blank" class="btn btn-warning btn-outline">
                                 <i class="fa-brands fa-quinscape fa-lg"></i>
                                 Demo (สาธิต)
                             </a>
@@ -211,57 +236,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-4 mt-4 rounded-lg ring-2">
-                    <div class="py-4 text-primary" id="product_tabContent">
-                        <div name="product_tabContent" class="block">Starter (จอเรียกคิว) เป็นระบบการเรียกรับบริการแบบกำหนดเอง การใช้งานออกแบบให้เรียบง่าย
-                            สามารถเรียกรับบริการได้ง่ายโดยการกดเรียกผ่าน key board ไร้สาย รองรับหลายภาษา เช่น ไทย English Chinese...
-                            <p class="p-4">
-                                <span class="badge badge-neutral">แสดงข้อมูล video:</span>
-                                ระบบจะแสดงข้อมูล Video สามารถปรับเปลื่ยนได้
-                            </p>
-                            <p class="p-4">
-                                <span class="badge badge-neutral">แสดงข้อมูลตัวหนังสือประชาสัมพันธ์:</span>
-                                ระบบจะแสดงข้อมูล โฆษณาประชาสัมพันธ์ สามารถปรับเปลื่ยนได้
-                            </p>
-                            <p class="p-4">
-                                <span class="badge badge-neutral">* สามารถปรับรูปแบบการแสดงผลตามต้องการ:</span>
-                                ระบบจะแสดงข้อมูล รูปแบบ สี ตาราง สามารถออกแบบได้ตามลูกค้าต้องการ (เป็นงานออกแบบเฉพาะราย)
-                            </p>
 
-                            <p class="p-4 text-sm text-warning">
-                                * รายการเพื่มเติมขอสงวนสิทธ์
-                            </p>
-                            <details>
-                                <summary class="float-right text-warning">รายละเอียดอุปกรณ์ระบบ</summary>
-                                <div class="info_box">
-                                    <div class="info_icon ">
-                                        <i class="fa-solid fa-list-ul fa-3x"></i>
-                                    </div>
-                                    <div class="info_content">
-                                        <div class="stat-title">จอเรียกคิว ขนาด 32-55 ตามต้องการ</div>
-                                        <div class="stat-title">กล่อง TV Box พร้อมโปรแกรมระบบ QPKS(ระบบเรียกบริการ Starter)</div>
-                                        <div class="stat-title">Key board Numpad(ตัวเลข) ไร้สาย</div>
-                                    </div>
-
-                                </div>
-                            </details>
-                        </div>
-                        <div name="product_tabContent" class="hidden"> Vivamus rhoncus nisl sed venenatis
-                            luctus. Sed condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque
-                            dignissim, placerat orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna. Duis gravida ex
-                            pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec aliquam cursus, ex elit euismod lorem, vehicula rhoncus
-                            nisl dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum
-                            hendrerit vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum. </div>
-                        <div name="product_tabContent" class="hidden"> Cras ut ipsum ornare, aliquam ipsum non,
-                            posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id fermentum risus efficitur vel. Nulla iaculis malesuada
-                            scelerisque. Praesent vel ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod neque, non bibendum nibh neque et
-                            erat. Etiam dignissim aliquam ligula, aliquet feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie lectus, vitae
-                            hendrerit nisl. Nullam metus odio, malesuada in vehicula at, consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum
-                            a. Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi orci et nulla. Donec pellentesque tortor vel nisl
-                            commodo ullamcorper. Donec varius massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
-                    </div>
-                </div>
-                <div class="p-4 mt-4 border mockup-window ">
+                <div class="p-4 mt-4 border mockup-window">
                     <p class="p-4">
                         ระบบเรียกบริการสามารถมีลักษณะหลากหลายได้ตามความต้องการขององค์กรหรือสถานที่ใช้บริการ บางระบบอาจใช้หมายเลขประจำตัว (เช่น หมายเลขคิว)
                         เพื่อแสดงลำดับคิวของผู้รอในแถว และบางระบบอาจมีการใช้เทคโนโลยีเพื่อแจ้งเตือนผู้รอเมื่อถึงคิวของตน เช่น
@@ -321,10 +297,8 @@
                 </div>
             </div>
 
-
-
         </div>
-
+        {% include '_side_menu_bar.html' %}
     </div>
 
     {% include '_footer.html' %}

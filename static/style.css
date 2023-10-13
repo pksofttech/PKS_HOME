@@ -4135,6 +4135,14 @@ html {
   height: 100vh;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -4187,12 +4195,8 @@ html {
   width: 24rem;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.w-4\/5 {
-  width: 80%;
+.w-52 {
+  width: 13rem;
 }
 
 .min-w-0 {
@@ -4217,6 +4221,14 @@ html {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .flex-1 {
@@ -4251,16 +4263,8 @@ html {
   resize: both;
 }
 
-.auto-cols-min {
-  grid-auto-columns: min-content;
-}
-
 .grid-flow-row {
   grid-auto-flow: row;
-}
-
-.grid-flow-col {
-  grid-auto-flow: column;
 }
 
 .grid-cols-2 {
@@ -4349,6 +4353,10 @@ html {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .overflow-x-auto {
@@ -4798,6 +4806,10 @@ html {
 
 .underline-offset-4 {
   text-underline-offset: 4px;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow {
@@ -5324,7 +5336,6 @@ div.dataTables_wrapper {
 .info_box {
   display: flex;
   width: 100%;
-  overflow: hidden;
   border-radius: 0.375rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -5366,22 +5377,6 @@ div.dataTables_wrapper {
 .info_content {
   background-color: transparent;
   padding: 1rem;
-}
-
-.text_success_h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: hsl(var(--su) / var(--tw-text-opacity));
-}
-
-.text_success_h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: hsl(var(--su) / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -5651,10 +5646,6 @@ div.dataTables_wrapper {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
@@ -5685,16 +5676,16 @@ div.dataTables_wrapper {
     margin-bottom: 1.5rem;
   }
 
+  .lg\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-10 {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
