@@ -13,19 +13,52 @@
 
         <li>
             <a class="" href="/home">
-                <i class="fa-solid fa-house"></i>
-                หน้าหลัก(Home)
+                <i class="fa-solid fa-house fa-2x"></i>
+                Home (หน้าหลัก)
                 <!-- <span class="badge badge-sm">99+</span> -->
             </a>
         </li>
 
         <li>
+            <a class="" href="/develop">
+                <i class="text-orange-600 fa-brands fa-ubuntu fa-2x"></i>
+                Develop (พัฒนาโปรแกรมเฉพาะตามต้องการ)
+            </a>
+        </li>
+
+        <li>
             <a class="" href="/qpks">
-                <i class="fa-brands fa-quinscape"></i>
+                <i class="text-blue-600 fa-brands fa-quinscape fa-2x"></i>
                 QPKS (ระบบจัดการคิว)
                 <!-- <span class="badge badge-sm">99+</span> -->
             </a>
         </li>
 
+        <li class="mt-8 border rounded-lg">
+            <button onclick="card_connect_dialog.showModal()" class="inline-flex justify-end">
+                <div class="badge-sm badge badge-info">
+                    Connect Me...
+                </div>
+
+                <i class="fa-regular fa-address-card fa-2x text-info"></i>
+            </button>
+        </li>
+
     </ul>
 </div>
+
+<dialog id="card_connect_dialog" class="modal">
+
+    <div class="p-8 card glass">
+        <form method="dialog">
+            <button class="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
+        </form>
+        <h2 class="card-title">Line ID</h2>
+        <figure><img class="w-48 p-4" src="/static/image/75821.jpg" alt="QPKS" /></figure>
+        <div class="card-body">
+            <h2 class="card-title">081-1434939</h2>
+            <p>บรรณพต นุ่มนาค</p>
+        </div>
+    </div>
+
+</dialog>

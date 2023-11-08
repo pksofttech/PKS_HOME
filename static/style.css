@@ -712,6 +712,11 @@ html {
     color: hsl(var(--bc) / var(--tw-text-opacity));
   }
 
+  .link-primary:hover {
+    --tw-text-opacity: 1;
+    color: hsl(var(--pf) / var(--tw-text-opacity));
+  }
+
   .menu li > *:not(ul):not(.menu-title):not(details):active,
 .menu li > *:not(ul):not(.menu-title):not(details).active,
 .menu li > details > summary:active {
@@ -837,6 +842,13 @@ html {
 
 .card-body :where(p) {
   flex-grow: 1;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .card figure {
@@ -2514,6 +2526,11 @@ html {
   isolation: isolate;
 }
 
+.link-primary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
 .link:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3326,6 +3343,49 @@ html {
   border-radius: var(--rounded-box, 1rem);
 }
 
+.glass,
+  .glass.btn-active {
+  border: none;
+  -webkit-backdrop-filter: blur(var(--glass-blur, 40px));
+          backdrop-filter: blur(var(--glass-blur, 40px));
+  background-color: transparent;
+  background-image: linear-gradient(
+        135deg,
+        rgb(255 255 255 / var(--glass-opacity, 30%)) 0%,
+        rgb(0 0 0 / 0%) 100%
+      ),
+      linear-gradient(
+        var(--glass-reflex-degree, 100deg),
+        rgb(255 255 255 / var(--glass-reflex-opacity, 10%)) 25%,
+        rgb(0 0 0 / 0%) 25%
+      );
+  box-shadow: 0 0 0 1px rgb(255 255 255 / var(--glass-border-opacity, 10%)) inset,
+      0 0 0 2px rgb(0 0 0 / 5%);
+  text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
+}
+
+@media (hover: hover) {
+  .glass.btn-active {
+    border: none;
+    -webkit-backdrop-filter: blur(var(--glass-blur, 40px));
+            backdrop-filter: blur(var(--glass-blur, 40px));
+    background-color: transparent;
+    background-image: linear-gradient(
+          135deg,
+          rgb(255 255 255 / var(--glass-opacity, 30%)) 0%,
+          rgb(0 0 0 / 0%) 100%
+        ),
+        linear-gradient(
+          var(--glass-reflex-degree, 100deg),
+          rgb(255 255 255 / var(--glass-reflex-opacity, 10%)) 25%,
+          rgb(0 0 0 / 0%) 25%
+        );
+    box-shadow: 0 0 0 1px rgb(255 255 255 / var(--glass-border-opacity, 10%)) inset,
+        0 0 0 2px rgb(0 0 0 / 5%);
+    text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
+  }
+}
+
 .artboard-demo {
   display: flex;
   flex: none;
@@ -3444,6 +3504,14 @@ html {
   border-top-width: 4px;
 }
 
+.btn-sm {
+  height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  min-height: 2rem;
+  font-size: 0.875rem;
+}
+
 .btn-lg {
   height: 4rem;
   padding-left: 1.5rem;
@@ -3454,6 +3522,12 @@ html {
 
 .btn-block {
   width: 100%;
+}
+
+.btn-square:where(.btn-sm) {
+  height: 2rem;
+  width: 2rem;
+  padding: 0px;
 }
 
 .btn-square:where(.btn-lg) {
@@ -3967,6 +4041,14 @@ html {
   top: 0px;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
 .z-\[1\] {
   z-index: 1;
 }
@@ -4063,6 +4145,10 @@ html {
   margin-top: 1.25rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -4131,12 +4217,12 @@ html {
   height: 20rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-96 {
   height: 24rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .max-h-96 {
@@ -4187,16 +4273,16 @@ html {
   width: 2rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-96 {
   width: 24rem;
 }
 
-.w-52 {
-  width: 13rem;
+.w-full {
+  width: 100%;
+}
+
+.w-48 {
+  width: 12rem;
 }
 
 .min-w-0 {
@@ -4221,14 +4307,6 @@ html {
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-lg {
-  max-width: 32rem;
 }
 
 .flex-1 {
@@ -4257,6 +4335,16 @@ html {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .resize {
@@ -4387,6 +4475,10 @@ html {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-l-lg {
@@ -4798,6 +4890,11 @@ html {
 .text-warning {
   --tw-text-opacity: 1;
   color: hsl(var(--wa) / var(--tw-text-opacity));
+}
+
+.text-orange-600 {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -5336,6 +5433,7 @@ div.dataTables_wrapper {
 .info_box {
   display: flex;
   width: 100%;
+  overflow: hidden;
   border-radius: 0.375rem;
   border-width: 1px;
   --tw-border-opacity: 1;

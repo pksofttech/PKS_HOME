@@ -191,7 +191,7 @@ div.dataTables_wrapper {
 }
 
 .info_box {
-    @apply flex w-full  rounded-md shadow-lg border border-gray-500;
+    @apply flex w-full overflow-hidden  rounded-md shadow-lg border border-gray-500;
 }
 
 .info_icon {
